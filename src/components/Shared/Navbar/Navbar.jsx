@@ -1,5 +1,6 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { FaUserCircle } from "react-icons/fa";
+import { HiArrowLongRight } from "react-icons/hi2";
 import Logo from "./Logo";
 
 const Navbar = () => {
@@ -15,6 +16,12 @@ const Navbar = () => {
         to="/"
       >
         Home
+      </NavLink>
+      <NavLink
+        className={({ isActive }) => (isActive ? "active" : "default")}
+        to="/products"
+      >
+        Products
       </NavLink>
       <NavLink
         className={({ isActive }) => (isActive ? "active" : "default")}
@@ -42,15 +49,15 @@ const Navbar = () => {
   return (
     <>
       <div
-        className={`navbar bg-black px-2 py-3 md:py-5 ${
-          isHomeRoute ? "fixed z-10 bg-opacity-30" : ""
+        className={`navbar bg-black bg-opacity-100 px-4 py-4 md:py-6 ${
+          isHomeRoute ? "fixed z-10 bg-opacity-40" : ""
         }`}
       >
         <div className="navbar-start">
           <div className="dropdown">
             <label
               tabIndex={0}
-              className="btn btn-ghost lg:hidden text-lime-500"
+              className="btn btn-ghost lg:hidden text-violet-600"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +76,7 @@ const Navbar = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-compact dropdown-content mt-3 px-4 py-3 shadow bg-gradient-to-r from-yellow-50 to-amber-100 rounded-lg w-40"
+              className="menu menu-compact dropdown-content mt-3 px-4 py-3 shadow bg-black rounded-lg bg-opacity-60 w-40"
             >
               {navOptions}
             </ul>
@@ -101,8 +108,10 @@ const Navbar = () => {
               <button className="btn-primary">Logout</button>
             </div>
           ) : (
-            <Link to="/login" className="btn-primary">
-              Login
+            <Link to="/login">
+              <button className="btn-primary flex gap-2 items-center">
+                Login <HiArrowLongRight className="text-2xl" />
+              </button>
             </Link>
           )}
         </div>
