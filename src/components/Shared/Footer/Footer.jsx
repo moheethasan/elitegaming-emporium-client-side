@@ -90,16 +90,19 @@ const Footer = () => {
             Stay up to date with the latest news, gaming tips, and exclusive
             offers by subscribing to our newsletter.
           </p>
-          <div className="flex">
+          <form className="flex">
             <input
-              className="border-0 rounded-l-xl w-full md:w-3/4 p-4 bg-white"
+              className="border-black rounded-l-xl w-full md:w-3/4 p-4 bg-white"
               type="email"
               placeholder="Email Address"
             />
-            <button className="transition duration-200 px-3 md:px-5 py-3 md:py-4 text-white bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-700 hover:to-violet-700 rounded-r-xl">
-              <FaPaperPlane className="text-4xl" />
+            <button
+              type="submit"
+              className="transition duration-200 px-3 md:px-5 py-3 md:py-4 text-white bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-700 hover:to-violet-700 rounded-r-xl"
+            >
+              <FaPaperPlane className="text-xl" />
             </button>
-          </div>
+          </form>
         </div>
       </div>
       <p className="text-center pt-16 text-white">
