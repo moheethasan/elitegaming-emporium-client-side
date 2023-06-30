@@ -4,24 +4,31 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import circle1 from "../../../assets/banner/design-circle-1.webp";
 import circle3 from "../../../assets/banner/design-circle-3.webp";
 import { Link } from "react-router-dom";
 import { BsCart4, BsController } from "react-icons/bs";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+import useAxiosSecure from "../../../hooks/useAxiosSecure";
+import { useQuery } from "@tanstack/react-query";
+import Loader from "../../../components/Shared/Loader/Loader";
 
 const FeaturedProducts = () => {
-  const [products, setProducts] = useState([]);
+  const [axiosSecure] = useAxiosSecure();
   const [selected, setSelected] = useState(false);
 
-  useEffect(() => {
-    fetch("http://localhost:5000/products/featured")
-      .then((res) => res.json())
-      .then((data) => {
-        setProducts(data);
-      });
-  }, []);
+  const { data: products = [], isLoading } = useQuery(
+    ["products"],
+    async () => {
+      const res = await axiosSecure.get("/products/featured");
+      return res.data;
+    }
+  );
+
+  if (isLoading) {
+    return <Loader></Loader>;
+  }
 
   return (
     <section className="relative bg-black">
