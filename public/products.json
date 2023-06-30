@@ -1,0 +1,56 @@
+[
+  {
+    "product_name": "Cloud Alpha Gaming Headset",
+    "product_image": "https://i.ibb.co/rc8Xmmv/hyperx-cloud-alpha-black-1-main-1600x-removebg-preview-306x203.png",
+    "category": "Headset",
+    "admin_name": "Moheet Hasan",
+    "admin_email": "moheethasan4@gmail.com",
+    "price": 400,
+    "total_sold": 70
+  },
+  {
+    "product_name": "Radeon RX 120 GTS Graphics Card",
+    "product_image": "https://i.ibb.co/bPvXNBc/1-306x203.png",
+    "category": "Card",
+    "admin_name": "Moheet Hasan",
+    "admin_email": "moheethasan4@gmail.com",
+    "price": 560,
+    "total_sold": 60
+  },
+  {
+    "product_name": "Multi-Functional Ergonomic Gaming Chair",
+    "product_image": "https://i.ibb.co/pRgvzJ2/1-0122603b-f3a8-4182-b26c-08ab01e5c511-306x203.png",
+    "category": "Chair",
+    "admin_name": "Moheet Hasan",
+    "admin_email": "moheethasan4@gmail.com",
+    "price": 600,
+    "total_sold": 55
+  },
+  {
+    "product_name": "Radeon™ RX 750 XT SPEEDSTER MERC",
+    "product_image": "https://i.ibb.co/Vmr850m/1-a4d5097a-c593-4035-a1d9-b3016461a034-306x203.png",
+    "category": "Card",
+    "admin_name": "Moheet Hasan",
+    "admin_email": "moheethasan4@gmail.com",
+    "price": 450,
+    "total_sold": 66
+  },
+  {
+    "product_name": "Kepler Brooks Gaming Chair",
+    "product_image": "https://i.ibb.co/k6j7Lmw/1-56c58a53-f8f7-4fc0-9b92-574e8696ff4d-306x203.png",
+    "category": "Chair",
+    "admin_name": "Moheet Hasan",
+    "admin_email": "moheethasan4@gmail.com",
+    "price": 700,
+    "total_sold": 59
+  },
+  {
+    "product_name": "Alienware Gameing Monitor T 45",
+    "product_image": "https://i.ibb.co/xGLg7WH/1-1b6b9b1a-54f6-4df3-99ee-8d9362e873ba-306x203.png",
+    "category": "Monitor",
+    "admin_name": "Moheet Hasan",
+    "admin_email": "moheethasan4@gmail.com",
+    "price": 500,
+    "total_sold": 68
+  }
+]

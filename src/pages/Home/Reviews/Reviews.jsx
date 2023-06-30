@@ -49,13 +49,13 @@ const Reviews = () => {
                   <h5 className="font-bold leading-4">David Rodriguez</h5>
                   <p className="leading-4 text-sm font-semibold">Client</p>
                 </div>
-                <div className="ms-auto flex items-center">
+                <div className="ms-auto flex gap-px items-center">
+                  <BsStarFill className="text-blue-500" />
                   <BsStarFill className="text-violet-500" />
+                  <BsStarFill className="text-blue-500" />
                   <BsStarFill className="text-violet-500" />
-                  <BsStarFill className="text-violet-500" />
-                  <BsStarFill className="text-violet-500" />
-                  <BsStarHalf className="text-violet-500" />
-                  <p>
+                  <BsStarHalf className="text-blue-500" />
+                  <p className="ms-2">
                     <span className="text-violet-500">4.5</span>/5.0
                   </p>
                 </div>
@@ -78,13 +78,13 @@ const Reviews = () => {
                   <h5 className="font-bold leading-4">David Rodriguez</h5>
                   <p className="leading-4 text-sm font-semibold">Client</p>
                 </div>
-                <div className="ms-auto flex items-center">
+                <div className="ms-auto flex gap-px items-center">
+                  <BsStarFill className="text-blue-500" />
                   <BsStarFill className="text-violet-500" />
+                  <BsStarFill className="text-blue-500" />
                   <BsStarFill className="text-violet-500" />
-                  <BsStarFill className="text-violet-500" />
-                  <BsStarFill className="text-violet-500" />
-                  <BsStarHalf className="text-violet-500" />
-                  <p>
+                  <BsStarHalf className="text-blue-500" />
+                  <p className="ms-2">
                     <span className="text-violet-500">4.5</span>/5.0
                   </p>
                 </div>
@@ -107,13 +107,13 @@ const Reviews = () => {
                   <h5 className="font-bold leading-4">David Rodriguez</h5>
                   <p className="leading-4 text-sm font-semibold">Client</p>
                 </div>
-                <div className="ms-auto flex items-center">
+                <div className="ms-auto flex gap-px items-center">
+                  <BsStarFill className="text-blue-500" />
                   <BsStarFill className="text-violet-500" />
+                  <BsStarFill className="text-blue-500" />
                   <BsStarFill className="text-violet-500" />
-                  <BsStarFill className="text-violet-500" />
-                  <BsStarFill className="text-violet-500" />
-                  <BsStarHalf className="text-violet-500" />
-                  <p>
+                  <BsStarHalf className="text-blue-500" />
+                  <p className="ms-2">
                     <span className="text-violet-500">4.5</span>/5.0
                   </p>
                 </div>
@@ -136,13 +136,13 @@ const Reviews = () => {
                   <h5 className="font-bold leading-4">David Rodriguez</h5>
                   <p className="leading-4 text-sm font-semibold">Client</p>
                 </div>
-                <div className="ms-auto flex items-center">
+                <div className="ms-auto flex gap-px items-center">
+                  <BsStarFill className="text-blue-500" />
                   <BsStarFill className="text-violet-500" />
+                  <BsStarFill className="text-blue-500" />
                   <BsStarFill className="text-violet-500" />
-                  <BsStarFill className="text-violet-500" />
-                  <BsStarFill className="text-violet-500" />
-                  <BsStarHalf className="text-violet-500" />
-                  <p>
+                  <BsStarHalf className="text-blue-500" />
+                  <p className="ms-2">
                     <span className="text-violet-500">4.5</span>/5.0
                   </p>
                 </div>

@@ -47,12 +47,12 @@ const Navbar = () => {
   );
 
   return (
-    <>
-      <div
-        className={`navbar bg-black bg-opacity-100 px-4 py-4 md:py-6 ${
-          isHomeRoute ? "fixed z-10 bg-opacity-40" : ""
-        }`}
-      >
+    <nav
+      className={`bg-black bg-opacity-100 w-full py-4 md:py-6 z-20 ${
+        isHomeRoute ? "fixed z-10 bg-opacity-30" : ""
+      }`}
+    >
+      <div className="navbar container mx-auto px-4">
         <div className="navbar-start">
           <div className="dropdown">
             <label
@@ -76,7 +76,7 @@ const Navbar = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-compact dropdown-content mt-3 px-4 py-3 shadow bg-black rounded-lg bg-opacity-60 w-40"
+              className="menu menu-compact dropdown-content mt-3 px-4 py-3 shadow bg-black rounded-lg bg-opacity-70 w-40"
             >
               {navOptions}
             </ul>
@@ -116,7 +116,7 @@ const Navbar = () => {
           )}
         </div>
       </div>
-    </>
+    </nav>
   );
 };
 
