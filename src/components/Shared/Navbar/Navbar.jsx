@@ -9,7 +9,10 @@ const Navbar = () => {
   const { user, logOut } = useAuth();
 
   const location = useLocation();
-  const isHomeRoute = location.pathname === "/";
+  const isHomeLoginRegister =
+    location.pathname === "/" ||
+    location.pathname === "/login" ||
+    location.pathname === "/register";
 
   const handleLogOut = () => {
     logOut()
@@ -42,7 +45,7 @@ const Navbar = () => {
       {user && (
         <NavLink
           className={({ isActive }) => (isActive ? "active" : "default")}
-          to="/dashboard/home"
+          to="/dashboard"
         >
           Dashboard
         </NavLink>
@@ -65,7 +68,7 @@ const Navbar = () => {
   return (
     <nav
       className={`bg-black bg-opacity-100 w-full py-4 md:py-6 z-20 ${
-        isHomeRoute ? "fixed z-10 bg-opacity-30" : ""
+        isHomeLoginRegister ? "fixed z-10 bg-opacity-30" : ""
       }`}
     >
       <div className="navbar container mx-auto px-4">

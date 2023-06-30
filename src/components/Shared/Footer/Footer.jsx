@@ -1,23 +1,35 @@
 import { FaPaperPlane } from "react-icons/fa";
 import Logo from "../Navbar/Logo";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FiFacebook, FiInstagram, FiMail, FiTwitter } from "react-icons/fi";
 import circle2 from "../../../assets/banner/design-circle-2.avif";
+import circle3 from "../../../assets/banner/design-circle-3.webp";
 
 const Footer = () => {
+  const location = useLocation();
+  const isLoginRegister =
+    location.pathname === "/login" || location.pathname === "/register";
   return (
-    <footer className="bg-black mt-20 pt-20 pb-10 px-4 relative">
-      <img
-        className="absolute top-0 right-0 w-2/5 lg:w-1/5"
-        src={circle2}
-        alt="image"
-      />
+    <footer
+      className={`bg-black mt-20 ${
+        isLoginRegister && "mt-0"
+      } pt-20 pb-10 px-4 relative`}
+    >
+      {isLoginRegister ? (
+        <img className="absolute -top-40 right-0" src={circle3} alt="image" />
+      ) : (
+        <img
+          className="absolute top-0 right-0 w-2/5 lg:w-1/5"
+          src={circle2}
+          alt="image"
+        />
+      )}
       <img
         className="absolute bottom-0 left-0 rotate-180 w-2/5 lg:w-1/5"
         src={circle2}
         alt="image"
       />
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 text-gray-400">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 text-gray-400 z-20 relative">
         <div>
           <Logo></Logo>
           <h2 className="text-2xl font-bold mt-6 mb-3 text-white">

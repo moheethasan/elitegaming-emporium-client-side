@@ -8,6 +8,9 @@ import animationData from "../../components/LottieFile/animation.json";
 import SocialLogin from "../../components/Shared/SocialLogin/SocialLogin";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
+import circle1 from "../../assets/banner/design-circle-1.webp";
+import circle2 from "../../assets/banner/design-circle-2.avif";
+import circle3 from "../../assets/banner/design-circle-3.webp";
 
 const Register = () => {
   const [error, setError] = useState("");
@@ -93,8 +96,23 @@ const Register = () => {
   };
 
   return (
-    <>
-      <div className="container mx-auto lg:flex justify-center items-center gap-10 my-10 lg:my-20 xl:my-32">
+    <div className="bg-black relative">
+      <img
+        className="absolute top-0 left-0 lg:left-[8%] w-3/5 lg:w-4/12"
+        src={circle1}
+        alt="image"
+      />
+      <img
+        className="absolute top-0 right-0 w-2/5 lg:w-1/5"
+        src={circle2}
+        alt="image"
+      />
+      <img
+        className="absolute -bottom-40 z-10 -left-60 rotate-180"
+        src={circle3}
+        alt="image"
+      />
+      <div className="container mx-auto lg:flex justify-center items-center gap-10 pt-28 pb-28 lg:pt-52 xl:py-60">
         <Lottie
           animationData={animationData}
           loop={true}
@@ -102,7 +120,7 @@ const Register = () => {
           className="w-11/12 md:w-4/5 max-w-xl mx-auto lg:mx-0"
         />
         <div className="card w-11/12 md:w-4/5 max-w-lg mx-auto lg:mx-0 shadow-2xl bg-base-100 mt-5 lg:mt-0">
-          <form onSubmit={handleSubmit(onSubmit)} className="card-body">
+          <form onSubmit={handleSubmit(onSubmit)} className="card-body z-20">
             <h1 className="text-4xl text-center font-bold pt-5 pb-8">
               Register
             </h1>
@@ -231,7 +249,7 @@ const Register = () => {
           </form>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

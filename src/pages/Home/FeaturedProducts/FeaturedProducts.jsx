@@ -84,12 +84,12 @@ const FeaturedProducts = () => {
                 {selected ? (
                   <AiFillHeart
                     onClick={() => setSelected(!selected)}
-                    className="text-2xl text-violet-600 cursor-pointer"
+                    className="text-2xl text-red-600 cursor-pointer"
                   />
                 ) : (
                   <AiOutlineHeart
                     onClick={() => setSelected(!selected)}
-                    className="text-2xl text-violet-600 cursor-pointer"
+                    className="text-2xl text-white cursor-pointer"
                   />
                 )}
               </div>

@@ -23,7 +23,7 @@ const Banner = () => {
         alt="image"
       />
       <img
-        className="absolute -bottom-40 z-10 -left-60 rotate-180"
+        className="absolute -bottom-40 z-10 -left-60"
         src={circle3}
         alt="image"
       />

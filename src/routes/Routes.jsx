@@ -6,6 +6,7 @@ import About from "../pages/About/About.jsx";
 import Blog from "../pages/Blog/Blog.jsx";
 import Login from "../pages/Login/Login.jsx";
 import Register from "../pages/Register/Register.jsx";
+import DashboardLayout from "../layout/DashboardLayout.jsx";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
         element: <Register></Register>,
       },
     ],
+  },
+  {
+    path: "dashboard",
+    element: <DashboardLayout></DashboardLayout>,
   },
 ]);
 
