@@ -4,6 +4,7 @@ import { HiArrowLongRight } from "react-icons/hi2";
 import Logo from "./Logo";
 import useAuth from "../../../hooks/useAuth";
 import Swal from "sweetalert2";
+import useAdmin from "../../../hooks/useAdmin";
 
 const Navbar = () => {
   const { user, logOut } = useAuth();
@@ -13,6 +14,8 @@ const Navbar = () => {
     location.pathname === "/" ||
     location.pathname === "/login" ||
     location.pathname === "/register";
+
+  const [isAdmin] = useAdmin();
 
   const handleLogOut = () => {
     logOut()
@@ -45,7 +48,7 @@ const Navbar = () => {
       {user && (
         <NavLink
           className={({ isActive }) => (isActive ? "active" : "default")}
-          to="/dashboard"
+          to={`/dashboard${isAdmin ? "/myProducts" : "/myCart"}`}
         >
           Dashboard
         </NavLink>

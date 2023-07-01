@@ -7,6 +7,10 @@ import Blog from "../pages/Blog/Blog.jsx";
 import Login from "../pages/Login/Login.jsx";
 import Register from "../pages/Register/Register.jsx";
 import DashboardLayout from "../layout/DashboardLayout.jsx";
+import MyCart from "../pages/Dashboard/UserDashboard/MyCart/MyCart.jsx";
+import PurchasedProducts from "../pages/Dashboard/UserDashboard/PurchasedProducts/PurchasedProducts.jsx";
+import PaymentHistory from "../pages/Dashboard/UserDashboard/PaymentHistory/PaymentHistory.jsx";
+import PaymentCheckout from "../pages/Dashboard/UserDashboard/MyCart/PaymentCheckout.jsx";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +46,26 @@ const router = createBrowserRouter([
   {
     path: "dashboard",
     element: <DashboardLayout></DashboardLayout>,
+    children: [
+      {
+        path: "myCart",
+        element: <MyCart></MyCart>,
+      },
+      {
+        path: "purchasedProducts",
+        element: <PurchasedProducts></PurchasedProducts>,
+      },
+      {
+        path: "paymentCheckout/:id",
+        element: <PaymentCheckout></PaymentCheckout>,
+        loader: ({ params }) =>
+          fetch(`${import.meta.env.VITE_apiUrl}/purchases/${params.id}`),
+      },
+      {
+        path: "paymentHistory",
+        element: <PaymentHistory></PaymentHistory>,
+      },
+    ],
   },
 ]);
 

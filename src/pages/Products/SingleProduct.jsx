@@ -37,6 +37,7 @@ const SingleProduct = ({ product }) => {
       user_email: user?.email,
       product_name,
       product_image,
+      category,
       price,
       admin_name,
       payment_status: "bookmarked",
