@@ -31,19 +31,19 @@ const ManageUsers = () => {
         Total Users: {users.length}
       </h2>
       <div className="overflow-x-auto">
-        <table className="text-gray-600 table-sm md:table-md lg:table-lg w-full bg-lime-100 mt-5 rounded-lg">
-          <thead>
+        <table className="text-gray-500 font-semibold table-sm md:table-md lg:table-lg w-full mt-5 rounded-lg">
+          <thead className="border-b-2">
             <tr>
-              <th></th>
-              <th className="text-start">Name</th>
-              <th className="text-start">Email</th>
-              <th className="text-start">Role</th>
-              <th className="text-start">Action</th>
+              <th className="text-start uppercase">No.</th>
+              <th className="text-start uppercase">Name</th>
+              <th className="text-start uppercase">Email</th>
+              <th className="text-start uppercase">Role</th>
+              <th className="text-start uppercase">Action</th>
             </tr>
           </thead>
           <tbody>
             {users.map((user, index) => (
-              <tr key={user._id}>
+              <tr key={user._id} className="border-b-2">
                 <td>{index + 1}</td>
                 <td>{user.name}</td>
                 <td>{user.email}</td>
@@ -52,14 +52,14 @@ const ManageUsers = () => {
                   <button
                     disabled={user.role === "user" ? true : false}
                     onClick={() => handleRoleUpdate(user, "user")}
-                    className="btn btn-accent text-white bg-lime-500 border-0 hover:bg-lime-600"
+                    className="btn btn-accent text-white bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-700 hover:to-violet-700 border-0"
                   >
                     Make User
                   </button>
                   <button
                     disabled={user.role === "admin" ? true : false}
                     onClick={() => handleRoleUpdate(user, "admin")}
-                    className="btn btn-accent text-white bg-lime-500 border-0 hover:bg-lime-600"
+                    className="btn btn-accent text-white bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-700 hover:to-violet-700 border-0"
                   >
                     Make Admin
                   </button>

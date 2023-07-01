@@ -17,6 +17,7 @@ import ManageUsers from "../pages/Dashboard/AdminDashboard/ManageUsers/ManageUse
 import UpdateProduct from "../pages/Dashboard/AdminDashboard/MyProducts/UpdateProduct.jsx";
 import PrivateRoute from "./PrivateRoute.jsx";
 import AdminRoute from "./AdminRoute.jsx";
+import Profile from "../pages/Dashboard/Profile/Profile.jsx";
 
 const router = createBrowserRouter([
   {
@@ -64,6 +65,10 @@ const router = createBrowserRouter([
             <MyCart></MyCart>
           </PrivateRoute>
         ),
+      },
+      {
+        path: "profile",
+        element: <Profile></Profile>,
       },
       {
         path: "purchasedProducts",
