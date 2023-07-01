@@ -109,9 +109,12 @@ const FeaturedProducts = () => {
                 <p className="text-lg font-bold text-gray-300">
                   Price: ${product?.price}
                 </p>
-                <button className="btn-primary flex gap-2 items-center relative z-10">
+                <Link
+                  to="/products"
+                  className="btn-primary flex gap-2 items-center relative z-10"
+                >
                   Add to Cart <BsCart4 className="text-xl" />
-                </button>
+                </Link>
               </div>
             </SwiperSlide>
           ))}

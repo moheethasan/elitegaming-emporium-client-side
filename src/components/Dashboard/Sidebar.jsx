@@ -195,17 +195,24 @@ const Sidebar = () => {
               </NavLink>
               <NavLink
                 className="flex items-center px-4 py-2 mt-1 rounded-lg transition-colors duration-300 transform  hover:bg-gradient-to-r from-blue-600 to-violet-600 text-white"
-                to="/instructors"
+                to="/products"
               >
                 <GiTeacher className="w-5 h-5" />
-                <span className="mx-2 font-medium">Instructors</span>
+                <span className="mx-2 font-medium">Products</span>
               </NavLink>
               <NavLink
                 className="flex items-center px-4 py-2 mt-1 rounded-lg transition-colors duration-300 transform  hover:bg-gradient-to-r from-blue-600 to-violet-600 text-white"
-                to="/classes"
+                to="/about"
               >
                 <GiBookshelf className="w-5 h-5" />
-                <span className="mx-2 font-medium">Classes</span>
+                <span className="mx-2 font-medium">About</span>
+              </NavLink>
+              <NavLink
+                className="flex items-center px-4 py-2 mt-1 rounded-lg transition-colors duration-300 transform  hover:bg-gradient-to-r from-blue-600 to-violet-600 text-white"
+                to="/blog"
+              >
+                <GiBookshelf className="w-5 h-5" />
+                <span className="mx-2 font-medium">Blog</span>
               </NavLink>
             </nav>
           </div>

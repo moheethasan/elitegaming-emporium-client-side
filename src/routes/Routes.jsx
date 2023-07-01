@@ -11,6 +11,12 @@ import MyCart from "../pages/Dashboard/UserDashboard/MyCart/MyCart.jsx";
 import PurchasedProducts from "../pages/Dashboard/UserDashboard/PurchasedProducts/PurchasedProducts.jsx";
 import PaymentHistory from "../pages/Dashboard/UserDashboard/PaymentHistory/PaymentHistory.jsx";
 import PaymentCheckout from "../pages/Dashboard/UserDashboard/MyCart/PaymentCheckout.jsx";
+import MyProducts from "../pages/Dashboard/AdminDashboard/MyProducts/MyProducts.jsx";
+import AddProduct from "../pages/Dashboard/AdminDashboard/AddProduct/AddProduct.jsx";
+import ManageUsers from "../pages/Dashboard/AdminDashboard/ManageUsers/ManageUsers.jsx";
+import UpdateProduct from "../pages/Dashboard/AdminDashboard/MyProducts/UpdateProduct.jsx";
+import PrivateRoute from "./PrivateRoute.jsx";
+import AdminRoute from "./AdminRoute.jsx";
 
 const router = createBrowserRouter([
   {
@@ -45,25 +51,79 @@ const router = createBrowserRouter([
   },
   {
     path: "dashboard",
-    element: <DashboardLayout></DashboardLayout>,
+    element: (
+      <PrivateRoute>
+        <DashboardLayout></DashboardLayout>
+      </PrivateRoute>
+    ),
     children: [
       {
         path: "myCart",
-        element: <MyCart></MyCart>,
+        element: (
+          <PrivateRoute>
+            <MyCart></MyCart>
+          </PrivateRoute>
+        ),
       },
       {
         path: "purchasedProducts",
-        element: <PurchasedProducts></PurchasedProducts>,
+        element: (
+          <PrivateRoute>
+            <PurchasedProducts></PurchasedProducts>
+          </PrivateRoute>
+        ),
       },
       {
         path: "paymentCheckout/:id",
-        element: <PaymentCheckout></PaymentCheckout>,
+        element: (
+          <PrivateRoute>
+            <PaymentCheckout></PaymentCheckout>
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
           fetch(`${import.meta.env.VITE_apiUrl}/purchases/${params.id}`),
       },
       {
         path: "paymentHistory",
-        element: <PaymentHistory></PaymentHistory>,
+        element: (
+          <PrivateRoute>
+            <PaymentHistory></PaymentHistory>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "myProducts",
+        element: (
+          <AdminRoute>
+            <MyProducts></MyProducts>
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "updateProduct/:id",
+        element: (
+          <AdminRoute>
+            <UpdateProduct></UpdateProduct>
+          </AdminRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`${import.meta.env.VITE_apiUrl}/products/${params.id}`),
+      },
+      {
+        path: "addProduct",
+        element: (
+          <AdminRoute>
+            <AddProduct></AddProduct>
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "manageUsers",
+        element: (
+          <AdminRoute>
+            <ManageUsers></ManageUsers>
+          </AdminRoute>
+        ),
       },
     ],
   },

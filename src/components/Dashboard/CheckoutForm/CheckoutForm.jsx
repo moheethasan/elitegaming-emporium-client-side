@@ -6,7 +6,7 @@ import useAuth from "../../../hooks/useAuth";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 
-const CheckoutForm = ({ price, selectedClass }) => {
+const CheckoutForm = ({ price, selectedProduct }) => {
   const stripe = useStripe();
   const elements = useElements();
   const { user } = useAuth();
@@ -69,11 +69,11 @@ const CheckoutForm = ({ price, selectedClass }) => {
         payment_status: "purchased",
       };
       axiosSecure
-        .patch(`/purchases/${selectedClass._id}`, updatedStatus)
+        .patch(`/purchases/${selectedProduct._id}`, updatedStatus)
         .then((data) => {
           if (data.data.modifiedCount > 0) {
             const payment = {
-              class_name: selectedClass.class_name,
+              product_name: selectedProduct.product_name,
               email: user?.email,
               transactionId: paymentIntent.id,
               date: new Date(),

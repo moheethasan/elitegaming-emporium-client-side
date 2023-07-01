@@ -6,9 +6,9 @@ import CheckoutForm from "../../../../components/Dashboard/CheckoutForm/Checkout
 const stripePromise = loadStripe(import.meta.env.VITE_Payment_Gateway_PK);
 
 const PaymentCheckout = () => {
-  const selectedClass = useLoaderData();
+  const selectedProduct = useLoaderData();
 
-  const amount = selectedClass.price;
+  const amount = selectedProduct.price;
   const price = parseFloat(amount.toFixed(2));
 
   return (
@@ -19,7 +19,7 @@ const PaymentCheckout = () => {
       <Elements stripe={stripePromise}>
         <CheckoutForm
           price={price}
-          selectedClass={selectedClass}
+          selectedProduct={selectedProduct}
         ></CheckoutForm>
       </Elements>
     </div>

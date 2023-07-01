@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { BsCart4 } from "react-icons/bs";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import useAdmin from "../../hooks/useAdmin";
 import Swal from "sweetalert2";
@@ -101,14 +101,13 @@ const SingleProduct = ({ product }) => {
       </div>
       <div className="flex justify-between items-center">
         <p className="text-lg font-bold text-gray-900">Price: ${price}</p>
-        {/* TODO: update operation */}
         {isAdmin ? (
-          <button
-            onClick={() => handleAddToCart()}
+          <Link
+            to={`/dashboard/updateProduct/${_id}`}
             className="btn-primary flex gap-2 items-center relative z-10"
           >
             Update Now <BsCart4 className="text-xl" />
-          </button>
+          </Link>
         ) : (
           <button
             onClick={() => handleAddToCart()}
