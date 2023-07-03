@@ -4,12 +4,12 @@ This is a simple web application developed using React.js for the frontend and N
 
 ## Technologies Used
 
-🚀 Front-End: HTML5, CSS3, JavaScript, React.js
-⚙️ Back-End: Node.js, Express.js
-📊 Database Management: MongoDB
-🌐 Deployment and Hosting: Vercel, Firebase
-💅 UI Frameworks: Tailwind CSS, DaisyUI
-🔒 Authentication and Authorization: JWT, Firebase
+- 🚀 Front-End: HTML5, CSS3, JavaScript, React.js
+- ⚙️ Back-End: Node.js, Express.js
+- 📊 Database Management: MongoDB
+- 🌐 Deployment and Hosting: Vercel, Firebase
+- 💅 UI Frameworks: Tailwind CSS, DaisyUI
+- 🔒 Authentication and Authorization: JWT, Firebase
 
 ## Getting Started
 
