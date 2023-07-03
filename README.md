@@ -1,6 +1,7 @@
 # EliteGaming Emporium
 
-This is a simple web application developed using React.js for the frontend and Node.js for the backend. The application features user registration and login system with validation. Once logged in, users can create, read, update, and delete posts.
+This is a simple web application developed using React.js for the frontend and Node.js for the backend. The application features user registration and login system with validation. Once logged in, users can create, read, update, and delete posts. It's a role-based website with user & admin role. So if you register as a new user, by default you will be a normal user and you can bookmark or purchase products. Admin can add and update new products and also can promote or demote users or admins.
+##### Admin Credentials: admin@gmail.com (password: 111111A!)
 
 ## Technologies Used
 
