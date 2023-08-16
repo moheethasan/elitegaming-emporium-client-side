@@ -21,7 +21,7 @@ const Reviews = () => {
         breakpoints={{
           0: {
             slidesPerView: 1,
-            spaceBetween: 10,
+            spaceBetween: 20,
           },
           1024: {
             slidesPerView: 2,
@@ -35,7 +35,7 @@ const Reviews = () => {
         className="mySwiper select-none"
       >
         <SwiperSlide className="border border-violet-600 rounded-bl-lg rounded-tr-lg p-3 bg-gradient-to-r from-blue-200 mb-10">
-          <div className="flex items-center">
+          <div className="md:flex items-center">
             <img className="w-[148px] h-[156px]" src={slide1} alt="slide" />
             <div className="">
               <h3 className="text-2xl font-bold">Gamer&#39;s Journey!</h3>
@@ -64,7 +64,7 @@ const Reviews = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide className="border border-violet-600 rounded-bl-lg rounded-tr-lg p-3 bg-gradient-to-r from-blue-200 mb-10">
-          <div className="flex items-center">
+          <div className="md:flex items-center">
             <img className="w-[148px] h-[156px]" src={slide2} alt="slide" />
             <div className="">
               <h3 className="text-2xl font-bold">One Level Time!</h3>
@@ -93,7 +93,7 @@ const Reviews = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide className="border border-violet-600 rounded-bl-lg rounded-tr-lg p-3 bg-gradient-to-r from-blue-200 mb-10">
-          <div className="flex items-center">
+          <div className="md:flex items-center">
             <img className="w-[148px] h-[156px]" src={slide1} alt="slide" />
             <div className="">
               <h3 className="text-2xl font-bold">Gamer&#39;s Journey!</h3>
@@ -122,7 +122,7 @@ const Reviews = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide className="border border-violet-600 rounded-bl-lg rounded-tr-lg p-3 bg-gradient-to-r from-blue-200 mb-10">
-          <div className="flex items-center">
+          <div className="md:flex items-center">
             <img className="w-[148px] h-[156px]" src={slide2} alt="slide" />
             <div className="">
               <h3 className="text-2xl font-bold">One Level Time!</h3>

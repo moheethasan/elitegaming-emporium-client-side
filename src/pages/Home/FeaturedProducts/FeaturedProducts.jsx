@@ -31,7 +31,7 @@ const FeaturedProducts = () => {
   }
 
   return (
-    <section className="relative bg-black">
+    <section className="relative bg-black overflow-hidden">
       <img
         className="absolute top-0 right-0 lg:right-[8%] w-3/5 lg:w-4/12"
         src={circle1}
@@ -53,9 +53,9 @@ const FeaturedProducts = () => {
           loop
           freeMode={true}
           breakpoints={{
-            500: {
+            0: {
               slidesPerView: 1,
-              spaceBetween: 0,
+              spaceBetween: 20,
             },
             768: {
               slidesPerView: 2,
